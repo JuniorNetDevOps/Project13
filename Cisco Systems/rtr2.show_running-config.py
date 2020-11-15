@@ -12,7 +12,7 @@ rtr2 = {
 
 
 # Connect to router using SSH
-net_connect = ConnectHandler(**rtr1)
+net_connect = ConnectHandler(**rtr2)
 output = net_connect.send_command('show running-config')
 
 
