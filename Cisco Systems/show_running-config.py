@@ -43,7 +43,7 @@ devices = [rtr1, rtr2, cor1, cor2]
 for device in devices:
     net_connect = ConnectHandler(**device)
     output = net_connect.send_command('show running-config')
-    print(f"--------- {device('host')} ---------")
+    print(f"--------- ('ip') ---------")
     print(f"\n\n--------- BEGIN ---------")
     print(output)
     print("--------- END ---------")
