@@ -12,7 +12,7 @@ rtr1 = {
 
 # Connect to router using SSH
 net_connect = ConnectHandler(**rtr1)
-output = net_connect.send_command('show running-config interface ethernet 0/0')
+output = net_connect.send_command('show running-config')
 
 
 print(f"\n\n--------- {rtr1['host']} ---------")
