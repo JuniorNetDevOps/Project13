@@ -1,7 +1,7 @@
 from netmiko import ConnectHandler
 
 
-# DEFINE THE ROUTER's DETAILS
+# Define the router's details
 rtr1 = {
     'device_type': 'cisco_ios',
     'host': '192.168.16.33',
