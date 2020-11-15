@@ -10,10 +10,9 @@ rtr1 = {
     'password': 's3cur3@2020',
 }
 
-
+# Connect to router using SSH
 net_connect = ConnectHandler(**rtr1)
 output = net_connect.send_command('show running-config interface ethernet 0/0')
-output += net_connect.send_command('show ip interface brief')
 
 
 print(f"\n\n--------- {rtr1['host']} ---------")
