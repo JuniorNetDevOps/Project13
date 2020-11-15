@@ -1,7 +1,7 @@
 from netmiko import ConnectHandler
 
 
-# DEFINE THE ROUTER's DETAILS
+# Define the devices' details
 rtr1 = {
     'device_type': 'cisco_ios',
     'ip': '192.168.16.32',
@@ -34,11 +34,16 @@ cor2 = {
     'password': 's3cur3@2020',
 }
 
+
+# Create the dictionary
 devices = [rtr1, rtr2, cor1, cor2]
 
+
+# Connect to the devices using SSH
 for device in devices:
     net_connect = ConnectHandler(**device)
-    output = net_connect.send_command('show running-config | section line con 0')
+    output = net_connect.send_command('show running-config')
+    print(f"--------- {device('host')} ---------")
     print(f"\n\n--------- BEGIN ---------")
     print(output)
     print("--------- END ---------")
