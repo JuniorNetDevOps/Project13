@@ -10,6 +10,7 @@ rtr1 = {
     'password': 's3cur3@2020',
 }
 
+
 # Connect to router using SSH
 net_connect = ConnectHandler(**rtr1)
 output = net_connect.send_command('show running-config')
